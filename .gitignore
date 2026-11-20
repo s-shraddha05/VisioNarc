@@ -1,0 +1,41 @@
+# Secrets
+.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.db
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Runtime data (never commit captured media or logs)
+backend/storage/
+backend/logs/
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+Thumbs.db
+.DS_Store
+
+# MediaPipe runtime + models (installed by scripts/setup_mediapipe.ps1)
+frontend/public/mediapipe/
+
+# Database backups (contain personal data; never commit)
+backend/backups/
+
+# Submission-only exclusions for protected demo databases
+/backend/demo.db
+/backend/demo-presentation.db
+
+# Submission-only exclusions for sensitive or protected files
+/backend/scripts/reset_admin_password.py
+/backend/scripts/seed_synthetic_demo.py
+/.claude/launch.json

@@ -1,0 +1,20 @@
+# VisoNarc backend runtime dependencies (Phase 1).
+# Exact pins; verified on Python 3.13 / Windows x64. Full transitive lock: requirements.lock.txt
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.1
+pydantic-settings==2.16.1
+SQLAlchemy==2.1.6
+alembic==1.20.1
+PyMySQL==1.2.3
+# Required by PyMySQL for MySQL 8 caching_sha2_password authentication
+cryptography==50.0.2
+bcrypt==5.0.0
+PyJWT==2.15.1
+# Needed for file uploads (image/audio) from Phase 3 onward
+python-multipart==0.0.32
+# Phase 3 signal processing (voice features, landmark statistics). Only NumPy is used on the
+# server; face/pose landmark detection runs in the browser (MediaPipe Tasks, see frontend).
+numpy==2.5.4
+# Phase 4 PDF reports (pure-Python wheel, BSD). Pulls in pillow 13.0.0 + charset-normalizer 3.5.2.
+reportlab==5.1.0

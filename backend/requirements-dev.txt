@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest==9.1.1
+httpx==0.28.1
+# Development-only: dependency vulnerability audit (python -m pip_audit). Not needed to run VisoNarc.
+pip-audit==2.10.1
